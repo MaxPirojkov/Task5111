@@ -81,15 +81,6 @@ public class MainActivity extends AppCompatActivity implements ItemsDataAdapter.
     }
 
     public void writeFile(List<ItemData> items) {
-        try {
-            FileOutputStream fos = getApplicationContext().openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(items);
-            oos.close();
-            Log.d(LOG_TAG, "Файл записан" );
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try {
